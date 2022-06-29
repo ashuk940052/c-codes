@@ -63,3 +63,21 @@ int Bdeq()
     p->front++;
     return x;
 }
+void Eenq(int x)
+{
+    int i;
+    if(full()==1)
+    return ;
+    if(p->rear==-1)
+    {
+        p->front=p->rear=0;
+        p->data[p->rear]=x;
+    }
+    else if(p->rear!=max-1)
+    {
+        ++p->rear;
+        p->data[p->rear]=x;
+    }
+    else
+    for(i=p->rear;i<=p->rear;i++)
+}
