@@ -9,6 +9,8 @@ typedef struct tree
     struct tree *left,*right;
 }node;
 node *root,*temp,*ttemp,*p,*r;
+int l,w;
+
 void creat_node(int x)
 {
     root=(node*)malloc(sizeof(node));
@@ -35,8 +37,32 @@ void add_node(int x)
     else
     ttemp->right=p;
 }
+void inorder(node *p)
+{
+    if(p!=null)
+    {
+        inorder(p->left);
+        cout<<p->data;
+        inorder(p->right);
+    }
+}
 int main() {
-  
-
+    creat_node(50);
+    add_node(30);
+    add_node(70);
+    add_node(20);
+    add_node(35);
+    add_node(10);
+    add_node(24);
+    add_node(15);
+    add_node(25);
+    add_node(45);
+    add_node(60);
+    add_node(55);
+    add_node(90);
+    add_node(80);
+    add_node(85);
+    add_node(100);
+    inorder();
     return 0;
 }
