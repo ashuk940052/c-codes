@@ -1,0 +1,42 @@
+#include <iostream>
+#include<queue>
+using namespace std;
+#define null 0
+
+typedef struct tree
+{
+    int data;
+    struct tree *left,*right;
+}node;
+node *root,*temp,*ttemp,*p,*r;
+void creat_node(int x)
+{
+    root=(node*)malloc(sizeof(node));
+    root->data=x;
+    root->left=root->right=null;
+}
+void add_node(int x)
+{
+    temp=root;
+    while(temp!=null)
+    {
+        ttemp=temp;
+        if(temp->data==x)
+        temp=temp->left;
+        else
+        temp=temp->right;
+    }
+    p=(node*)malloc(sizeof(node));
+    p->data=x;
+    p->left=null;
+    p->right=null;
+    if(temp->data>x)
+    ttemp->left=p;
+    else
+    ttemp->right=p;
+}
+int main() {
+  
+
+    return 0;
+}
