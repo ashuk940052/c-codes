@@ -1,0 +1,21 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int sumofn(int n)
+{
+  if(n==0)
+  return 0;
+else
+ return sumofn(n/10)+n%10;
+  
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    cout<<sumofn(a);
+    
+    return 0;
+}
